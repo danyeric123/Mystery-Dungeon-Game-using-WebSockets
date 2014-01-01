@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/global.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootbox.min.js"></script>
+		<script>
+		    Array.prototype.remove = function() {
+                var what, a = arguments, L = a.length, ax;
+                while (L && this.length) {
+                    what = a[--L];
+                    while ((ax = this.indexOf(what)) !== -1) {
+                        this.splice(ax, 1);
+                    }
+                }
+                return this;
+            };    
+		</script>
+		<script src="js/core/items.js"></script>
+		<script src="js/core/game.js"></script>
+		<script src="js/core/player.js"></script>
+		<script src="js/core/commands.js"></script>
+		<script src="js/core/story.js"></script>
+		<script src="js/core/credits.js"></script>
+		<script src="js/core/genie.js"></script>
+	</head>
+	<body>
+		<div id="pageWrapper">
+			<div id="gameInfo">
+<!--
+				<div id="playerName" class="infoBox">
+				    <img src="images/person.png" width="32" height="32">
+				    <span>Player</span>
+				</div>
+-->
+				
+				<div id="health" class="infoBox">
+					<img src="images/heart.png" width="32" height="32">
+					<span></span>
+				</div>
+				
+				<div id="inventory" class="infoBox link">
+				    <img src="images/sack.png" width="32" height="32">
+				    <span>Inventory</span>
+				</div>
+				
+				<div id="gameStatus" class="infoBox">
+				    <img src="images/info.png" width="32" height="32">
+				    <span></span>
+				</div>
+				
+				<div id="gameReset" class="infoBox link">
+				    <img src="images/reset.png" alt="" width="32" height="32">
+				    <span>Reset Save</span>
+				</div>
+				
+			</div>
+			<div id="textContainer"></div>
+			<div id="userInput">
+				<input type="text" id="inputBox" placeholder="Write Here" />
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
